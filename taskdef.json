@@ -1,0 +1,18 @@
+{
+    "family": "test-repo",
+    "containerDefinitions": [
+        {
+            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "name": "test-repo",
+            "cpu": 10,
+            "memory": 256,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
